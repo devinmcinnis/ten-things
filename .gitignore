@@ -5,7 +5,6 @@
 # Compiled #
 # #######################
 /views/*.html
-/public
 /dist
 /built
 /design

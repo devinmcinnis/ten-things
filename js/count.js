@@ -49,26 +49,24 @@
     });
 
     $document.on('keypress', '.c-thing__input', function(e) {
-      var $input = $(this);
+      var $input = $(this),
+        $list = $('ul'),
+        $parent = $input.closest('li'),
+        id = parseInt($parent.data('id'), 10) + 1;
+
 
       // 13 is [enter]
       if (e.keyCode === 13) {
         // Prevent form from submitting
         e.preventDefault();
 
-        if ($input.val().length === 0) {
-          return false;
-        }
+        $('input[name=thing' + id +']').focus();
+      }
 
-        var $list = $('ul'),
-        id = parseInt($input.closest('li').data('id'), 10) + 1;
-
+      if ($input.val() && !$parent.hasClass('active')) {
         var $newListItem = $(buildNewLine(id));
         $list.append($newListItem);
-
-        setTimeout(function() {
-          $('input[name="thing'+id+'"]').focus();
-        }, 0);
+        $parent.addClass('active');
       }
     });
   });

@@ -1,3 +1,4 @@
+/* jshint ignore:start */
 'use strict';
 
 var Config = require('../config/config.js')();
@@ -17,3 +18,4 @@ var Routes = function(app) {
 };
 
 module.exports = Routes;
+/* jshint ignore:end */

@@ -13,7 +13,8 @@
     return '<li data-id="' + id + '">' +
               '<label>' +
                 '<span class="c-thing__label">#' + id + '</span>' +
-                '<input name="thing' + id + '" class="c-thing__input" type="text" placeholder="The next thing is next">' +
+                '<input name="thing' + id + '" class="c-thing__input" type="text" '+
+                  'placeholder="The next thing is next">' +
               '</label>' +
             '</li>';
   }

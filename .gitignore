@@ -6,7 +6,6 @@
 # #######################
 /views/*.html
 /dist
-/built
 /design
 /bower_components
 

@@ -1,17 +1,61 @@
 @import config
 
-/*
-** Remove styles below; only here as a test
-** This file should only contain @import files
-*/
-
 body
   font-family: font-serif
-  color: color-brand-main
+  color: color-text
+  text-align: center
+  font-size: 18px
 
-button
-  font-family: font-sans
+main
+  max-width: 600px
+  padding: 1em
+  margin: 0 auto
 
-img
-  max-width: 50%
+ul
+  list-style: none
+  padding-left: 0
 
+label
+  cursor: pointer
+
+input
+  font-family: font-serif
+  transition: border-bottom 0.2s ease-in-out
+
+  &:focus,
+  &:hover
+    outline: 0
+    border-bottom-color: color-brand-main
+
+.c-thing__input
+  font-size: inherit
+  padding: 1em
+  margin-top: 2em
+  margin-left: 1em
+  border-width: 0 0 1px 0
+
+  &[type="text"]
+    padding: 0.25em 0.5em 0.25em 0
+    width: 90%
+
+.c-thing__submit
+  font-size: inherit
+  padding: 0 0.25em
+  margin-top: 3em
+  background-color: transparent
+  border: 0
+  border-bottom: 1px solid color-border
+  cursor: pointer
+
+@keyframes showLabel
+  0%
+    left: 2em
+  100%
+    left: 0
+
+.c-thing__label
+  position: relative
+  left: 2.5em
+  z-index: -1
+  animation: showLabel 0.5s cubic-bezier(0.51, -0.07, 0.14, 1.58)
+  animation-fill-mode: forwards

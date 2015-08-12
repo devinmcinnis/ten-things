@@ -6,9 +6,13 @@ block extra-scripts
   //- endbuild
 
 block page-content
-  p The meaning of life is
-    = ' '
-    span(id="count")= count
-
-  button No it's not
+  h2 #{thing}
+  if something
+    form#tenthings
+      ul
+        li.c-thing(data-id="1")
+          label
+            span #1
+            input.c-thing__input(name="thing1" type="text" placeholder="First things first" autofocus)
+      input.c-thing__submit(type="submit" value="Finished")
 

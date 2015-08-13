@@ -1,4 +1,5 @@
 var newrelic = require('newrelic');
+var fs = require('fs');
 var compress = require('compression');
 var express = require('express');
 var helmet = require('helmet');
@@ -89,6 +90,15 @@ app.use(function(err, req, res, next) {
     error: {},
     status: status
   });
+});
+
+// Setup writable file on load
+var tempFile = {
+  list: []
+};
+
+fs.writeFile('/tmp/things.txt', JSON.stringify(tempFile), function(err) {
+  if (err) return console.log(err);
 });
 
 var server = app.listen(app.get('port'), function() {

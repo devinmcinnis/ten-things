@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');
 var config = require('./src/config/config.js')();
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/ten_things');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ten_things');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

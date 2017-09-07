@@ -1,0 +1,16 @@
+extends layout.jade
+
+block extra-scripts
+  script(src="/scripts/home.19848a1d.js")
+block page-content
+  h3 Writing down 10 ideas a day helps you be more creative.
+  h2 #{thing}
+  if something
+    form#tenthings
+      ul
+        li.c-thing(data-id="1")
+          label
+            span #1
+            input.c-thing__input(name="thing1" type="text" placeholder="First things first" autofocus)
+      input.c-thing__submit(type="submit" value="Post your ideas")
+

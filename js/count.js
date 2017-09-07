@@ -27,11 +27,6 @@
 
   $document.ready(function() {
     var oldDate = localStorage.getItem('submit');
-    var diff = Date.now() - parseInt(oldDate, 10);
-
-    if (diff < 86335426) {
-      $('main').append('<p><a href="/things">Results</a></p>');
-    }
 
     $document.on('submit', 'form#tenthings', function(e) {
       e.preventDefault();
@@ -43,6 +38,8 @@
 
         $form.remove();
 
+        var submitText = '<p>Tomorrow will bring new things. Here were some other ideas:</p>';
+        
         var listOfThings = '<ul>';
 
         for (var i = 0; i < res.things.length; i += 1) {
@@ -51,6 +48,7 @@
 
         listOfThings += '</ul>';
 
+        $('main').append(submitText);
         $('main').append(listOfThings);
 
         localStorage.setItem('submit', Date.now());
@@ -74,7 +72,11 @@
       if ($input.val() && !$parent.hasClass('active')) {
         var $newListItem = $(buildNewLine(id));
         $list.append($newListItem);
+        window.ga('send','event','itemCreation','addedItem',null,id);
         $parent.addClass('active');
+        if (id > 9) {
+          $('.c-thing__submit').css('display', 'block');
+        }
       }
     });
   });

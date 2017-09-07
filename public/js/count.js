@@ -27,11 +27,6 @@
 
   $document.ready(function() {
     var oldDate = localStorage.getItem('submit');
-    var diff = Date.now() - parseInt(oldDate, 10);
-
-    if (diff < 86335426) {
-      $('main').append('<p><a href="/things">Results</a></p>');
-    }
 
     $document.on('submit', 'form#tenthings', function(e) {
       e.preventDefault();

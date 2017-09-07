@@ -72,6 +72,7 @@
       if ($input.val() && !$parent.hasClass('active')) {
         var $newListItem = $(buildNewLine(id));
         $list.append($newListItem);
+        window.ga('send','event','itemCreation','addedItem',null,id);
         $parent.addClass('active');
         if (id > 9) {
           $('.c-thing__submit').css('display', 'block');

@@ -38,6 +38,8 @@
 
         $form.remove();
 
+        var submitText = '<p>The next one is tomorrow. Here were some other ideas:</p>';
+        
         var listOfThings = '<ul>';
 
         for (var i = 0; i < res.things.length; i += 1) {
@@ -46,6 +48,7 @@
 
         listOfThings += '</ul>';
 
+        $('main').append(submitText);
         $('main').append(listOfThings);
 
         localStorage.setItem('submit', Date.now());

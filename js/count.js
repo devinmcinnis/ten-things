@@ -38,7 +38,7 @@
 
         $form.remove();
 
-        var submitText = '<p>The next one is tomorrow. Here were some other ideas:</p>';
+        var submitText = '<p>Tomorrow will bring new things. Here were some other ideas:</p>';
         
         var listOfThings = '<ul>';
 
@@ -73,6 +73,9 @@
         var $newListItem = $(buildNewLine(id));
         $list.append($newListItem);
         $parent.addClass('active');
+        if (id > 9) {
+          $('.c-thing__submit').css('display', 'block');
+        }
       }
     });
   });

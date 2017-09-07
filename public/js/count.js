@@ -10,7 +10,7 @@
   var $document = $(document);
 
   function buildNewLine(id) {
-    return  '<li data-id="' + id + '">' +
+    return  '<li class="c-thing" data-id="' + id + '">' +
               '<label>' +
                 '<span class="c-thing__label">#' + id + '</span>' +
                 '<input name="thing' + id + '" class="c-thing__input" type="text" '+

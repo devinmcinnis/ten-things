@@ -15,7 +15,8 @@ var Routes = function(app) {
     });
   });
 
-  require('./count.js')(app);
+  // require('./count.js')(app);
+  require('./question.js')(app);
 };
 
 module.exports = Routes;

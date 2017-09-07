@@ -4,7 +4,6 @@ var Config = require('../config/config.js')();
 var Count = require('../models/count.js');
 var fs = require('fs');
 
-
 module.exports = function(app) {
   app.get('/things', function(req, res) {
     fs.readFile('/tmp/things.txt', 'utf8', function(err, json) {

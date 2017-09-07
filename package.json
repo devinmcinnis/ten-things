@@ -10,6 +10,7 @@
   "dependencies": {
     "body-parser": "~1.0.2",
     "bower": "~1.3.11",
+    "clone": "^2.1.1",
     "compression": "^1.3.0",
     "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
@@ -41,7 +42,7 @@
     "jshint-stylish": "~0.4.0",
     "morgan": "~1.0.1",
     "newrelic": "~1.13.2",
-    "run-sequence": "^1.0.2",
+    "run-sequence": "^1.2.2",
     "static-favicon": "~1.0.2"
   }
 }

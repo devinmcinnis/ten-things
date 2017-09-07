@@ -16,6 +16,22 @@ module.exports = function(app) {
   //     });
   // });
 
+  app.post('/question', function(req, res, next) {
+    if (!req.body.title) {
+      return res.end();
+    }
+
+    var obj = R.merge(req.body, {
+      created_at: new Date()
+    });
+
+    var question = new Question(obj);
+
+    question.save(function(err, q) {
+      return res.json(q);
+    });
+  });
+
   app.post('/things', function(req, res, next) {
     var things = [];
     var _thing;

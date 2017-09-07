@@ -3,6 +3,7 @@ body {
   color: #3f4044;
   text-align: center;
   font-size: 18px;
+  margin: 0;
 }
 main {
   max-width: 600px;
@@ -25,16 +26,25 @@ input:hover {
   outline: 0;
   border-bottom-color: #54abed;
 }
+.c-thing label {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 0.5em;
+}
+.c-thing span {
+  -ms-flex: 0;
+      flex: 0;
+}
 .c-thing__input {
   font-size: inherit;
   padding: 1em;
-  margin-top: 2em;
   margin-left: 1em;
   border-width: 0 0 1px 0;
 }
 .c-thing__input[type="text"] {
   padding: 0.25em 0.5em 0.25em 0;
-  width: 90%;
 }
 .c-thing__submit {
   display: none;

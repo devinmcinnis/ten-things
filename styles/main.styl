@@ -5,6 +5,7 @@ body
   color: color-text
   text-align: center
   font-size: 18px
+  margin 0
 
 main
   max-width: 600px
@@ -27,16 +28,23 @@ input
     outline: 0
     border-bottom-color: color-brand-main
 
+.c-thing
+  label
+    display flex
+    align-items center
+    margin-bottom 0.5em
+
+  span
+    flex 0
+
 .c-thing__input
   font-size: inherit
   padding: 1em
-  margin-top: 2em
   margin-left: 1em
   border-width: 0 0 1px 0
 
   &[type="text"]
     padding: 0.25em 0.5em 0.25em 0
-    width: 90%
 
 .c-thing__submit
   display: none

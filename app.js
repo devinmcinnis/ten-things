@@ -1,4 +1,4 @@
-var newrelic = require('newrelic');
+// var newrelic = require('newrelic');
 var fs = require('fs');
 var compress = require('compression');
 var express = require('express');
@@ -9,6 +9,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var config = require('./src/config/config.js')();
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/ten_things');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('connection success!');
+});
 
 var app = express();
 var env = process.env.NODE_ENV || 'development';
@@ -52,7 +61,7 @@ if (env === 'staging' || env === 'production') {
 
 */
 
-require('./src/routes')(app, newrelic);
+require('./src/routes')(app);
 
 /// Catch 404 and forward to error handler
 app.use(function(req, res, next) {

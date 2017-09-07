@@ -31,13 +31,15 @@ input:hover {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .c-thing span {
   -ms-flex: 0;
       flex: 0;
 }
 .c-thing__input {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   font-size: inherit;
   padding: 1em;
   margin-left: 1em;

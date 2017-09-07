@@ -39,7 +39,7 @@
         $form.remove();
 
         var submitText = '<p>Tomorrow will bring new things. Here were some other ideas:</p>';
-        
+
         var listOfThings = '<ul>';
 
         for (var i = 0; i < res.things.length; i += 1) {
@@ -74,7 +74,7 @@
         $list.append($newListItem);
         window.ga('send','event','itemCreation','addedItem',null,id);
         $parent.addClass('active');
-        if (id > 9) {
+        if (id > 10) {
           $('.c-thing__submit').css('display', 'block');
         }
       }

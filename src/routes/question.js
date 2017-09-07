@@ -2,7 +2,7 @@
 
 var R = require('ramda');
 var badWords = require('./badWords');
-var wordfilter = require('wordfilter')
+var wordfilter = require('wordfilter');
 wordfilter.addWords(badWords);
 var Question = require('./../models/question');
 // var Answer = require('./../models/answer');

@@ -16,7 +16,7 @@
   "latedef": false,
   "maxcomplexity": 7,
   "maxdepth": 5,
-  "maxlen": 90,
+  "maxlen": 1000,
   "newcap": true,
   "node": true,
   "quotmark": "single",
